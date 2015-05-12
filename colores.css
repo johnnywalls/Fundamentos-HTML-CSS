@@ -1,0 +1,47 @@
+.ejemplocolor {
+  width: 50%;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  margin-bottom: 20px;
+  border: 2px solid black;
+}
+/* Notación de nombres */
+#color1 {
+  color: royalblue;
+  background-color: whitesmoke;
+}
+/* Notación hexadecimal de 6 dígitos */
+#color2 {
+  color: #4169E1;
+  background-color: #F5F5F5;
+}
+/* Notación hexadecimal de 3 dígitos */
+#color3 {
+  color: #f00; /* rojo puro */
+  background-color: #00f; /* azul puro */;
+}
+
+/* Notación RGB */
+#color4 {
+  color: rgb(255,0,0); /* rojo puro */
+  background-color: rgb(0,0,255); /* azul puro */;
+}
+
+/* Notación RGB con transparencia */
+#color5 {
+  color: rgba(255,0,0,.5);
+  background-color: rgba(0,0,255,.5);
+}
+
+/* Notación HSL con porcentaje */
+#color6 {
+  color: hsl(0,100%,25%);
+  background-color: hsl(0,100%,75%);
+}
+
+/* Notación HSL con porcentaje */
+#color7 {
+  color: hsl(0,50%,25%);
+  background-color: hsl(0,50%,75%);
+}

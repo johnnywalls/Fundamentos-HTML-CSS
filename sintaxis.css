@@ -1,0 +1,21 @@
+/*
+ * Colocamos un color de fondo al documento para contrastar estilos
+ */
+body {
+  background-color: lightgrey;
+}
+/* Los comentarios pueden ser de una sola o varias líneas */
+h1 {
+  color: white;
+  font-size: 28pt;
+  text-align: center;
+  font-weight: bold;
+}
+/* Colocamos un color principal azul a los encabezados nivel 2,
+   pero esta regla puede ser ignorada si hay otra de mayor prioridad */
+h2 {
+  color:blue /* Si no hay otra propiedad en el bloque, el punto y coma es opcional */
+}
+p {
+  background-color: white;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Ejemplo de CSS</title>
+    <meta charset="UTF-8">
+    <!-- Incluimos una hoja de estilo externa, con la etiqueta "link", y el
+         atributo rel="stylesheet" -->
+    <link rel="stylesheet" href="sintaxis.css">
+    <style>
+      /* Estas reglas tendrán mayor prioridad que las especificadas en el
+         archivo CSS, en caso de conflicto, ya que se incluyeron después.
+         Nótese que el resultado sería distinto si el archivo se incluye
+         después de las reglas locales */
+      h2 { color: red }
+      /* Los nombres de clases comienzan con punto */
+      .negrillas { font-weight: bold }
+      /* Las reglas con ID comienzan con numeral */
+      #nota { font-style: italic; }
+      #nota a { color: green }
+      #nota a:hover { color: red }
+    </style>
+  </head>
+  <body>
+    <h1>Encabezado 1</h1>
+    <h2>Encabezado 2</h2>
+    <p>Este es un párrafo normal</p>
+    <!-- En el siguiente encabezado, se han especificado propiedades de estilo
+         locales en el mismo elemento -->
+    <h2 style="color:green;">Otro Encabezado Nivel 2</h2>
+    <p style="background-color: black; color: white;">Y aquí otro párrafo
+      con estilo local</p>
+
+    <p class="negrillas">Este es un párrafo en negrillas</p>
+    <a href="#">Éste es un enlace predeterminado</a>
+    <p id="nota">
+      Este párrafo es referenciado directamente por su ID en el estilo.
+      Contiene un <a href="#">enlace con estilo personalizado</a>
+    </p>
+  </body>
+</html>

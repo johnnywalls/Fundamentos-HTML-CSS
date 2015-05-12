@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Ejemplos de formularios en HTML</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>Ejemplos de formularios en HTML</h1>
+
+    <h2>Formulario 1</h2>
+    <form id="form1" method="post" action="http://example.com/procesar">
+      <label for="nombre">Nombre</label>
+      <br> <!-- por ahora, insertaremos saltos de línea, luego daremos formato
+                de manera más eficiente a formularios con CSS -->
+      <input name="nombre" id="nombre" type="text"> <br>
+
+      <!-- Nótese que podemos "etiquetar" los campos con "label". Utilizamos
+           el atributo "for" con el ID del campo para relacionar la etiqueta
+           con el respectivo campo del formulario. Esta relación es muy
+           importante también para los usuarios con tecnologías de accesibilidad -->
+      <label for="apellido">Apellido</label> <br>
+      <input name="apellido" id="apellido" type="text"> <br>
+
+      <!-- Otra sintaxis válida común es encerrar el texto y el campo dentro
+           de "label".  Esto es particularmente útil cuando no se asigna un
+           ID al campo -->
+      <label>Ciudad <br>
+        <input name="ciudad" type="text">
+      </label> <br>
+
+      <!-- Para campos de texto "multilínea", utilizamos "textarea" -->
+      <label for="comentario">Comentario o Sugerencia</label> <br>
+      <textarea name="comentario" id="comentario"
+                placeholder="Tu comentario..." rows="5" cols="40"></textarea> <br>
+
+      <!-- Para botones, tradicionalmente utilizamos una etiqueta "input"
+           especificando type="submit|reset|button" y el texto del botón
+           como valor -->
+      <input name="enviar_form1" type="submit" value="Enviar">
+      <input name="reiniciar_form1" type="reset" value="Reinicializar">
+      <!-- Pero también podemos utilizar la etiqueta "button", que facilita
+           incluir también formato en el texto de los botones -->
+      <button type="button">Otro <strong>botón</strong></button>
+    </form>
+
+    <hr>
+
+    <!-- Acá presentamos un segundo ejemplo con más tipos de campos,
+         agrupados en diferentes "fieldset".  Especificamos el atributo
+         "enctype" en este caso para permitir el envío correcto de los
+         datos al incluir campos para carga (upload) de archivos -->
+    <h2>Formulario de Registro</h2>
+    <form id="form2" method="post" action="http://example.com/procesar"
+          enctype="multipart/form-data">
+      <!-- Utilizamos la etiqueta "fieldset" para agrupar campos relacionados
+           en un formulario. Comúnmente agregamos una "leyenda" (legend)
+           como título de dicho grupo de campos -->
+      <fieldset>
+        <legend>Datos básicos</legend>
+
+        <label for="usuario">Usuario</label> <br>
+        <input name="usuario" id="usuario" type="text"> <br>
+
+        <label for="correo">Correo electrónico</label> <br>
+        <input name="correo" id="correo" type="text"> <br>
+
+        <!-- El atributo type="password" enmascara de manera automática
+             la entrada de texto -->
+        <label for="clave">Contraseña</label> <br>
+        <input name="clave" id="clave" type="password"> <br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Datos personales</legend>
+
+        <!-- Los "botones radio" permiten seleccionar una opción única entre
+             un grupo de alternativas -->
+        <label>Género</label> <br>
+        <label>
+          <input name="genero" type="radio" value="M">
+          Masculino
+        </label> <br>
+        <label>
+          <input name="genero" type="radio" value="F">
+          Femenino
+        </label> <br>
+        <br>
+
+        <!-- Los "botones checkbox" permiten seleccionar una o varias opciones
+             (e incluso ninguna) de un grupo de alternativas -->
+        <label>Nivel de Educación</label> <br>
+        <label>
+          <input name="educacion" type="checkbox" value="1">
+          Primaria
+        </label> <br>
+        <label>
+          <input name="educacion" type="checkbox" value="2">
+          Secundaria
+        </label> <br>
+        <label>
+          <input name="educacion" type="checkbox" value="3">
+          Técnica
+        </label> <br>
+        <label>
+          <input name="educacion" type="checkbox" value="4">
+          Grado Universitario
+        </label> <br>
+        <label>
+          <input name="educacion" type="checkbox" value="5">
+          Posgrado, Master, Doctorado
+        </label> <br>
+        <br>
+
+        <!-- Utilizamos "select" para las listas de selección. Aquí una
+             para selección simple. Nótese que podemos agrupar opciones
+             en una lista si lo deseamos -->
+        <label for="area">Área de Interés</label> <br>
+        <select name="area" id="area">
+          <option>--Seleccione--</option>
+          <optgroup label="Humanidades">
+            <option value="1">Derecho</option>
+            <option value="2">Filosofía</option>
+          </optgroup>
+          <optgroup label="Ciencias Básicas">
+            <option value="1">Matemática</option>
+            <option value="2">Física</option>
+            <option value="3">Biología</option>
+          </optgroup>
+        </select>
+        <br><br>
+
+        <!-- También podemos utilizar "select" para selección múltiple,
+             aunque, según el contexto, muchos prefieren utilizar grupos
+             de "checkbox" -->
+        <label for="campus">Campus seleccionado(s)</label> <br>
+        <select name="campus" id="campus" multiple>
+          <option value="1">Springfield</option>
+          <option value="3">Piedradura</option>
+          <option value="2">Villa Chica</option>
+          <option value="4">Ciudad Gótica</option>
+          <option value="5">Yellowstone</option>
+          <option value="6">Río</option>
+          <option value="6">Los Ángeles</option>
+        </select>
+        <br><br>
+
+        <!-- El tipo de entrada "file" se utiliza para permitir la carga de
+             archivos. En varios casos, al utilizar este tipo de campo,
+             necesitaremos modificar el tipo de codificación del formulario
+             (atributo "enctype") -->
+        <label for="foto">Cargar Foto</label> <br>
+        <input type="file" id="foto" name="foto" accept="image/*">
+      </fieldset>
+
+      <input name="enviar_form2" type="submit" value="Enviar Registro">
+      <input name="reiniciar_form2" type="reset" value="Reinicializar formulario de registro">
+    </form>
+  </body>
+</html>

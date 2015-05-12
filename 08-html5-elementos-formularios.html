@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
   </head>
   <body>
-    <form id="form1" oninput="porcentaje_seleccionado.value=porcentaje.value">
+    <h1>Ejemplos de formularios en HTML5</h1>
+
+    <form id="form1" enctype="multipart/form-data" method="post"
+          oninput="porcentaje_seleccionado.value=porcentaje.value">
+
       <!-- lista de sugerencias con datalist -->
       <label for="color1">Escriba o seleccione un nombre de color:</label>
       <input type="text" name="color1" id="color1" list="colores">
@@ -30,12 +34,15 @@
       <br>
 
       <label for="porcentaje">Porcentaje (1-100):</label>
-      <input type="range" id="porcentaje" name="porcentaje" min="0" max="100" step="5" value="30">
+      <input type="range" id="porcentaje" name="porcentaje"
+             min="0" max="100" step="5" value="30">
       <br>
 
-      <!-- el tipo "output" se usa para mostrar el resultado de un cálculo (ver "oninput" del formulario) -->
+      <!-- el tipo "output" se usa para mostrar el resultado de un cálculo
+          (ver "oninput" del formulario) -->
       <label for="porcentaje_seleccionado">Porcentaje Seleccionado:</label>
-      <output name="porcentaje_seleccionado" id="porcentaje_seleccionado" for="porcentaje"></output>
+      <output name="porcentaje_seleccionado" id="porcentaje_seleccionado"
+              for="porcentaje"></output>
       <br>
 
       <!-- el tipo "email" valida un patrón de correo, con @ -->
@@ -43,24 +50,29 @@
       <input type="email" name="correo" id="correo">
       <br>
 
-      <!-- El tipo "tel" hace que el método de entrada predeterminado sea más útil en dispositivos móviles.
-           También podemos combinarlo con "pattern" si queremos forzar la validación de un patrón o expresión
-           regular (7 dígitos exactamente, en este caso, pero pueden ser expresiones más complejas) -->
+      <!-- El tipo "tel" hace que el método de entrada predeterminado sea más
+           útil en dispositivos móviles. También podemos combinarlo con "pattern"
+           si queremos forzar la validación de un patrón o expresión regular
+           (aquí asumimos 7 dígitos exactamente, pero pueden especificarse
+           expresiones más complejas) -->
       <label for="telefono">Número Telefónico (7 dígitos):</label>
       <input type="tel" name="telefono" id="telefono" pattern="[0-9]{7}">
       <br>
 
-      <!-- el tipo "search" es similar a una caja de texto, pero según el dispositivo, facilita la entrada de búsqueda -->
+      <!-- el tipo "search" es similar a una caja de texto, pero según el
+           dispositivo, facilita la entrada de búsqueda -->
       <label for="busqueda">Búsqueda:</label>
       <input type="search" name="busqueda" id="busqueda" placeholder="texto a buscar...">
       <br>
 
-      <!-- el tipo "url" funciona de manera similar a "tel", optimizando la entrada en móviles -->
+      <!-- el tipo "url" funciona de manera similar a "tel", optimizando la 
+           entrada en móviles -->
       <label for="paginaweb">Página Web:</label>
       <input type="url" id="paginaweb" name="paginaweb">
       <br>
 
-      <!-- el tipo "date" proporciona un calendario nativo si el navegador lo implementa (ej Chrome) -->
+      <!-- el tipo "date" proporciona un calendario nativo si el navegador 
+           lo implementa (ej Chrome) -->
       <label for="fecha">Fecha de Nacimiento:</label>
       <input type="date" id="fecha" name="fecha" max="2014-12-31">
       <br>
@@ -91,7 +103,13 @@
       <input type="file" name="archivos" id="archivos" multiple="multiple">
       <br>
 
-      <input type="submit" value="Enviar">
+      <!-- En ocasiones necesitamos enviar el formulario a distintas acciones
+           según el botón seleccionado por el usuario.  El atributo "formaction"
+           es útil para este caso -->
+      <button type="submit">Enviar</button>
+      <button type="submit" formaction="http://example.com/accion2">
+        Enviar a otra acción
+      </button>
     </form>
   </body>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Título del documento</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <!-- Esto es un comentario. Puede abarcar una línea -->
+  <!--
+    O todo un bloque.  Además de indicar anotaciones útiles para el diseñador
+    o programador, también se usan de manera temporal en el proceso de elaboración
+    de la página, cuando se quieren suprimir ciertas secciones sin eliminarlas
+    por completo aún: -->
+  <!--
+    <p>
+      Éste es un párrafo <strong>que fue comentado</strong>
+    </p>
+  -->
+  <h1>Título</h1>
+  <h2>Título de segundo nivel</h2>
+  <!-- Aunque podríamos lograr una visualización similar de los encabezados
+       con simples párrafos y estilos CSS, usar etiquetas semánticas ayuda
+       a una mejor interpretación del contenido por parte del cliente/usuario.
+       Esto es particularmente útil en casos como dispositivos móviles y
+       lectores de pantalla (texto a voz) para usuarios con tecnologías de
+       accesibilidad -->
+  <!-- Nótese que podemos anidar etiquetas dentro de otras.  De hecho, todas
+       las etiquetas están, directa o indirectamente, contenidas en el bloque
+       <html></html>, y los elementos del documento se pueden representar
+       como una estructura de árbol -->
+  <p>
+    Párrafo con enlace: <a href="http://www.google.com">Enlace a Google</a>
+  </p>
+  <!-- No necesariamente tiene sentido anidar cualquier etiqueta dentro de otra. -->
+  <!-- El siguiente elemento origina un error de validación de la estructura HTML5,
+       aunque la visualización en el navegador no aparente problemas: -->
+  <p>Este es otro párrafo... <h2>Encabezado</h2> </p>
+</body>
+</html>

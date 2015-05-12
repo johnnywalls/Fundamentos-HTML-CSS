@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Ejemplo básico de CSS</title>
+    <meta charset="UTF-8">
+    <style>
+      h2 { color: red; }
+      .negrillas { font-weight: bold; }
+      #nota { font-style: italic; }
+      #nota a { color: green; }
+      #nota a:hover { color: red; }
+    </style>
+  </head>
+  <body>
+    <h1>Encabezado 1</h1>
+    <h2>Encabezado 2</h2>
+    <p>Este es un párrafo normal</p>
+    <h2 style="color:green;">Otro Encabezado Nivel 2</h2>
+    <p style="background-color: black; color: white;">Y aquí otro párrafo
+      con estilo local</p>
+    <p class="negrillas">Este es un párrafo en negrillas con clase</p>
+    <a href="#">Éste es un enlace con estilo predeterminado</a>
+    <p id="nota">
+      Este párrafo es referenciado directamente por su ID en el estilo.
+      Contiene un <a href="#">enlace con estilo personalizado</a>
+    </p>
+  </body>
+</html>

@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
   </head>
   <body>
-    <header>Encabezado</header>
+    <!-- La etiqueta "header" se utiliza como contenedor de un encabezado de página.
+         No confundir "header" con el bloque "head" (no visible) o con los distintos
+         encabezados de texto h1, h2 ... h6 -->
+    <header>Encabezado de página</header>
+    <!-- La etiqueta "nav" se utiliza para denotar elementos de navegación, comúnmente
+         consistentes de listas de enlaces o botones -->
     <nav>
       <ul>
         <li><a href="#">Inicio</a></li>
@@ -13,9 +18,15 @@
         <li><a href="#">Contacto</a></li>
       </ul>
     </nav>
+    <!-- La etiqueta "article" se utiliza para denotar el contenido principal del
+         documento, cuando éste tiene sentido por sí mismo (por ejemplo, podría ser
+         publicado también en un hilo de noticias RSS, incluido en otro sitio, etc),
+         es decir, sin los otros elementos de disposición de la página -->
+    <!-- También podríamos usar una etiqueta "section" más genérica, típicamente
+         asignandole un "id" para hacer referencia posteriormente -->
     <article>
       <h1>Título del artículo</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
          Duis varius consectetur lobortis. Donec gravida orci sit amet imperdiet consequat. 
          Duis eleifend tellus vitae sapien lacinia, quis posuere nisl pulvinar. 
          Quisque tristique quam at ornare aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
@@ -30,10 +41,14 @@
          Quisque sed egestas tellus. Fusce sodales posuere diam, eget suscipit ex mattis consectetur. Mauris dapibus porttitor sodales.
       </p>
     </article>
+    <!-- La etiqueta "aside" se utiliza para incluir información adicional o
+         explicativa, relacionada con una sección particular o con el documento
+         propiamente.  Aquí, podemos usarla para información del autor, por ejemplo -->
     <aside>
       <p>Autor: Homer J. Simpson</p>
       <p>Fecha: 22 Feb 2042</p>
     </aside>
-    <footer>Pie</footer>
+    <!-- Usamos "footer" para denotar el pie de página -->
+    <footer>Pie de página</footer>
   </body>
 </html>

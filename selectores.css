@@ -1,0 +1,106 @@
+/* Las propiedades definidas para "body" se aplicarán a muchos
+    de los elementos del documento */
+body {
+  color: #999;
+  background-color: white;
+}
+h1 { color: black }
+
+/* Agrupamos varios selectores separados con coma, cuando queremos
+    aplicar el mismo bloque de estilo */
+h1, h2 {
+  text-align: center;
+}
+
+/* La siguiente regla, se aplica a las etiquetas "small" contenidas
+    en un encabezado de primer nivel */
+h1 small {
+  color: grey;
+}
+
+/* Las especificaciones de clase comienzan con punto */
+.ejemplo {
+  padding: 10px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  margin-bottom: 15px;
+}
+
+/* La siguiente regla se aplica a encabezados de segundo nivel
+    que sean hijos inmediatos de un elemento con clase "ejemplo" */
+.ejemplo > h2 {
+  color: white;
+  background-color: grey;
+  text-align: left;
+  margin-top: 0px;
+}
+
+/* Ahora especificamos una regla con seudo-clase (before) para
+    visualizar de manera automática una frase antes del título
+    de cada bloque de ejemplos. Especificamos un solo separador (:)
+    para mantener compatibilidad con navegadores un poco más
+    antiguos (IE) que aún no soportan el separador doble (::) de
+    CSS3 para seudo-elementos */
+.ejemplo > h2:before {
+  content: '* Ejemplo: ';
+}
+
+/* Ejemplo de Seudo-clases para enlaces */
+/* Enlace no visitado */
+a:link {
+  color: #FF0000;
+}
+
+/* Enlace visitado */
+a:visited {
+  color: #00FF00;
+}
+/* Puntero sobre el enlace */
+a:hover {
+  color: #FF00FF;
+}
+
+/* Enlace seleccionado */
+a:active {
+  color: #0000FF;
+}
+
+/* Colocamos en verde los enlaces contenidos específicamente dentro
+    del elemento identificado como "ejemplo3" */
+#ejemplo3 a {
+  color: green;
+}
+
+/* Para el ejemplo, usamos el seudo-elemento de "hijo número X" para
+    dar un estilo particular al segundo enlace dentro de las listas
+    contenidas en #ejemplo3. Comúnmente, para algo tan específico,
+    lo más recomendable sería darle un ID particular a dicho enlace,
+    ya que la posición relativa puede variar al agregar o quitar
+    elementos */
+#ejemplo3 ul :nth-child(2) a {
+  color: lightblue;
+}
+
+/* La siguiente regla se aplica a todos los hr (horizontal rule,
+    o líneas horizontales) que se colocan como separadores entre
+    párrafos */
+p + hr {
+  width: 30%;
+  text-align: center;
+  color: #ccc;
+}
+
+/* Usamos otro seudo-elemento para dar formato especial a todos los
+    párrafos que sean el último de su contenedor (p.e., como una
+    especie de conclusión) */
+p:last-of-type {
+  text-align: right;
+  color: black;
+  font-size: 120%;
+  width: 30%;
+  margin: auto;
+}
+
+.negrillas { font-weight: bold }
+.texto-resaltado { background-color: yellow }
+

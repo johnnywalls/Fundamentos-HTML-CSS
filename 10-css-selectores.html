@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Selectores en CSS</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="selectores.css">
+  </head>
+  <body>
+    <h1>Encabezado 1</h1>
+    <h1>Encabezado 1 <small>con texto pequeño</small></h1>
+
+    <hr>
+
+    <h2>Encabezado 2</h2>
+
+    <div class="ejemplo">
+      <h2>Encabezado dentro de bloque de ejemplo</h2>
+      Texto de ejemplo...
+    </div>
+
+    <div class="ejemplo">
+      <h2>Lista de Enlaces</h2>
+      <!-- Los siguientes enlaces obedecen a las reglas generales de
+           estilo definidas arriba (variarán de color según el estado) -->
+      <ul>
+        <li><a href="#1">Enlace 1</a></li>
+        <li><a href="#2">Enlace 2</a></li>
+        <li><a href="#3">Enlace 3</a></li>
+        <li><a href="#4">Enlace 4</a></li>
+      </ul>
+    </div>
+
+    <!-- En el siguiente bloque, no se aplica la regla del encabezado h2
+         anterior, ya que no es un hijo directo del div .ejemplo -->
+    <div class="ejemplo">
+      <div id="ejemplo3">
+        <h2>Otro encabezado</h2>
+        <!-- A los siguientes enlaces no se les aplica la regla general,
+             ya que se dió una regla más específica para los enlaces
+             contenidos en el #ejemplo3 -->
+        <ul>
+          <li><a href="#">Enlace 1</a></li>
+          <li><a href="#">Enlace 2</a></li>
+          <li><a href="#">Enlace 3</a></li>
+          <li><a href="#">Enlace 4</a></li>
+        </ul>
+      </div>
+
+      <!-- Si queremos sólo un texto en negrillas, sería mejor utilizar
+          <strong> directamente. Aquí especificamos dos clases en el mismo
+          elemento (pueden escribirse tantas como sea necesario, separadas
+          por espacio) -->
+      <p>Párrafo con <span class="negrillas texto-resaltado">texto 
+         resaltado y negrillas</span>. </p>
+      <!-- Estos separadores "hr" tendrán aplicada una regla de estilo -->
+      <hr>
+      <p>Otro párrafo</p>
+      <hr>
+      <!-- Éste, al ser el último párrafo de su padre, tendrá un estilo
+           especial -->
+      <p>Y otro más...</p>
+    </div>
+
+  </body>
+</html>

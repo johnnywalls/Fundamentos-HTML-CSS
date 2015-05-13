@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unidades de longitud en CSS</title>
+  <meta charset="UTF-8">
+  <style>
+    .con-borde {
+      border: 1px solid black;
+      background-color: rgba(180,180,180,.2);
+    }
+    hr {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Encabezado predeterminado</h1>
+  <h1 style="font-size: 300%">Encabezado con tamaño relativo (300%)</h1>
+  <h1 style="font-size: 16px">Encabezado con tamaño absoluto (16px)</h1>
+  <h1 style="font-size: 16pt">Encabezado con tamaño absoluto (16pt)</h1>
+  <div class="con-borde" style="width:100%">
+    Contenedor de 100% del ancho
+    <div class="con-borde" style="width:50%">
+      Contenedor de 50% de su padre
+      <div class="con-borde" style="width:50%">
+        Otro contenedor de 50% de su padre
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="con-borde" style="width:300px">
+    Contenedor de ancho fijo (300px)
+    <div class="con-borde" style="width:70%">
+      Contenedor del 70% de su padre
+    </div>
+  </div>
+  <hr>
+  <div class="con-borde" style="width:40em;">
+    Contenedor de ancho fijo (40em)
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+    0123456789012345678901234567890123456789
+  </div>
+  <hr>
+  <div class="con-borde" style="font-size: 20px; width:40em;">
+    Contenedor de ancho fijo (40em) con tamaño de fuente 20px
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+    0123456789012345678901234567890123456789
+  </div>
+  <hr>
+  <div class="con-borde" style="width:80%;">
+    <h2>Contenedor del 80%</h2>
+
+    <h4>Imagen sin especificación de estilo para ancho y alto (tamaño original):</h4>
+    <img src="http://lorempixel.com/640/480/city/1/" alt="Imagen">
+
+    <hr>
+    <h4>Imagen al 50% de ancho y alto del contenedor:</h4>
+    <img src="http://lorempixel.com/640/480/city/1/" alt="Imagen"
+         style="width: 50%; height: 50%;">
+
+    <hr>
+    <h4>Imagen con unidades absolutas de ancho y alto (si la relación de aspecto)
+        no concuerda con la original, hay distorsión
+    </h4>
+    <img src="http://lorempixel.com/640/480/city/1/" alt="Imagen"
+         style="width: 640px; height: 200px;">
+    <hr>
+
+    <!-- Cuando queremos que la imagen se ajuste a un ancho específico
+         (absoluto o relativo), pero no se distorsione su relación de
+         aspecto (ancho/alto), podemos especificar, por ejemplo, sólo
+         el ancho para que el alto sea determinado automáticamente
+         por el navegador -->
+    <h4>Imagen con unidades sólo de ancho (300px)</h4>
+    <img src="http://lorempixel.com/640/480/city/1/" alt="Imagen"
+         style="width: 300px">
+  </div>
+</body>
+</html>

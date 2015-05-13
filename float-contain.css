@@ -1,0 +1,43 @@
+/* Esta técnica es conocida también como "clearfix" */
+.grupo:before,
+.grupo:after {
+  content: "";
+  display: table;
+}
+.grupo:after {
+  clear: both;
+}
+.grupo {
+  clear: both;
+  *zoom: 1; /* para navegadores un poco más antiguos */
+}
+
+/* El resto de la hoja de estilos es idéntico a float-clear.css,
+ * salvo por clear:both en el footer, que no es necesario ya que
+ * fue incluido arriba
+ */
+
+.grupo > * {
+  margin: 0 1.5% 24px 1.5%;
+}
+
+/* sección de enlaces de navegación */
+nav {
+  float: left;
+  width: 10%;
+}
+
+article {
+  float: left;
+  width: 70%;
+}
+
+aside {
+  float: left;
+  width: 10%;
+}
+
+/* Sólo para identificar visualmente cuál hoja CSS usamos */
+#hoja:after {
+  content: 'float-contain.css';
+}

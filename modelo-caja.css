@@ -1,0 +1,93 @@
+#caja1 {
+  /* Podemos utilizar un "atajo" para definir varios
+      atributos del borde de una vez */
+  border: 10px solid;
+  margin: 10px;
+  padding: 10px;
+  width: 500px;
+  height: 300px;
+}
+#caja2 {
+  /* Acá definimos atributos individuales de márgenes */
+  border-width: 20px; /* ancho para todos los márgenes */
+  border-top-style: solid; /* estilo del margen superior */
+  border-bottom-style: dotted; /* estilo del margen inferior */
+  border-left-style: double; /* estilo del margen izquierdo */
+  border-right-style: dashed; /* estilo del margen derecho */
+  /* También podemos definir individualmente márgenes y relleno,
+      si queremos. Acá hacemos márgenes individuales y relleno
+      global para el elemento */
+  margin-left: 10px;
+  margin-top: 50px;
+  /* Doblamos el relleno respecto de la primera caja para
+      ilustrar la diferencia */
+  padding: 20px;
+  /* Nótese que estamos definiendo las cajas 1 y 2 del mismo
+      ancho y alto, pero con el box-sizing predeterminado,
+      los anchos resultantes son distintos en la práctica */
+  width: 500px;
+  height: 300px;
+}
+
+/* Con las siguientes dos cajas, ilustraremos el uso de
+    box-sizing para garantizar las medidas de ancho y alto
+    totales según lo especificado */
+#caja3 {
+  border: 10px solid;
+  margin: 10px;
+  padding: 10px;
+  width: 500px;
+  height: 300px;
+  background-color: lightgrey;
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#caja4 {
+  border: 10px solid;
+  margin: 10px;
+  padding: 50px;
+  width: 500px;
+  height: 300px;
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Ilustrar radio de bordes */
+#caja5 {
+  border: 10px solid black;
+  border-radius: 15px;
+  margin: 50px;
+  width: 300px;
+  height: 300px;
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#caja6 {
+  border: 10px solid black;
+  border-radius: 50%;
+  margin: 50px;
+  width: 300px;
+  height: 300px;
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#caja7 {
+  border: 10px solid black;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 40%;
+  border-bottom-left-radius: 0px;
+  margin: 50px;
+  width: 300px;
+  height: 300px;
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.caja {
+  background-color: lightgrey;
+}

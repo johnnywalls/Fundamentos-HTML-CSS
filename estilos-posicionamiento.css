@@ -1,0 +1,40 @@
+/* encabezado */
+header {
+  font-weight: bold;
+  color: #DDD;
+  background-color: #aabbaa;
+  min-height: 60px;
+  line-height: 60px;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none; /* no mostrar lista con viñetas */
+  font-size: 1.2em;
+}
+
+nav ul li {
+  display: block;
+}
+
+nav ul li a {
+  color: #575c7d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  background: #deff90;
+  color: #485e0f;
+  text-decoration: none;
+}
+
+/* pie de página */
+footer {
+  background-color: lightgrey;
+  color: #9a9a9a;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 0;
+}

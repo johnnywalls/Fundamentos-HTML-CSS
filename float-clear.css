@@ -1,0 +1,31 @@
+/* Aprovechamos el contenedor de "grupo" para dar márgenes a las secciones
+ * de manera más compacta
+ */
+.grupo > * {
+  margin: 0 1.5% 24px 1.5%;
+}
+
+/* sección de enlaces de navegación */
+nav {
+  float: left;
+  width: 10%;
+}
+
+article {
+  float: left;
+  width: 70%;
+}
+
+aside {
+  float: left;
+  width: 10%;
+}
+
+footer {
+  clear: both; /* elimina el efecto de "float" dejado por las secciones anteriores */
+}
+
+/* Sólo para identificar visualmente cuál hoja CSS usamos */
+#hoja:after {
+  content: 'float-clear.css';
+}

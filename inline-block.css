@@ -1,0 +1,23 @@
+.grupo > * {
+  display: inline-block;
+  margin: 0 1.5% 24px 1.5%;
+  vertical-align: top;
+}
+
+/* sección de enlaces de navegación */
+nav {
+  width: 10%;
+}
+
+article {
+  width: 70%;
+}
+
+aside {
+  width: 10%;
+}
+
+/* Sólo para identificar visualmente cuál hoja CSS usamos */
+#hoja:after {
+  content: 'inline-block.css';
+}

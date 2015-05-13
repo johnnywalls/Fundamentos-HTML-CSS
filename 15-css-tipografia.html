@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tipografía con CSS</title>
+  <meta charset="UTF-8">
+  <!-- Incluimos un par de fuentes web con Google Fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet">
+  <style>
+  body {
+    font-size: 18px;
+  }
+
+  .paloseco {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  }
+
+  .remate {
+    font-family: 'Droid Serif', 'Times New Roman', Times, serif;
+  }
+
+  .ejemplo {
+    font-size: 200%;
+    background-color: grey;
+    color: white;
+  }
+
+  .italica {
+    font-style: italic; /* normal, italic, oblique */
+  }
+
+  .small-caps {
+    font-variant: small-caps;
+  }
+
+  .negrilla {
+    font-weight: bold; /* normal=400 y bold=700 son los más comunes */
+  }
+
+  .altura-normal {
+    background-color: lightgrey;
+  }
+
+  .sin-altura-linea {
+    background-color: lightgrey;
+    height: 50px;
+  }
+
+  .altura-centrada {
+    background-color: lightgrey;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .altura-doble {
+    background-color: lightgrey;
+    height: 50px;
+    line-height: 100px;
+  }
+
+  .indentado {
+    text-indent: 5em;
+  }
+  .indentado-negativo {
+    text-indent: -5em;
+  }
+
+  .texto-sombreado {
+    /* horizontal, vertical, desenfoque, color */
+    text-shadow: 3px 6px 2px rgba(0, 0, 0, .3);
+  }
+  .contenedor-sombreado {
+    border: 1px solid black;
+    box-shadow: 3px 6px 2px rgba(0, 0, 0, .3);
+  }
+  
+  .mayusculas {
+    text-transform: uppercase;
+  }
+  .minusculas {
+    text-transform: lowercase;
+  }
+  .iniciales {
+    text-transform: capitalize;
+  }
+  </style>
+</head>
+<body>
+  <h1>Tipografía con CSS</h1>
+
+  <hr>
+  <h1 class="ejemplo">Familias de fuente</h1>
+
+  <h1 class="paloseco">Encabezado en fuente "paloseco" (sans-serif)</h1>
+  <h1 class="remate">Encabezado en fuente "con remate" (serif)</h1>
+
+  <hr>
+  <h1 class="ejemplo">Font-style</h1>
+
+  <p>Éste es un párrafo predeterminado, contiene
+  <span class="italica">una frase con clase "italica".</span></p>
+
+  <hr>
+  <h1 class="ejemplo">Font-variant</h1>
+  <p class="small-caps">En este párrafo utilizamos la variante de
+  fuente "small-caps".</p>
+
+  <hr>
+  <h1 class="ejemplo">Peso de fuente (font-weight)</h1>
+  <p class="negrilla">ABCDEFGHIJKLMNOPQRSTUVWXYZ Este párrafo
+  tiene un peso de "negrilla" (bold, 700).</p>
+  <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ Éste es un párrafo 
+  predeterminado.<p>
+
+  <hr>
+  <h1 class="ejemplo">Altura de línea (line-height)</h1>
+  <p class="altura-normal">Texto normal</p>
+  <p class="sin-altura-linea">Texto sin altura de línea.</p>
+  <p class="altura-centrada">Texto con altura "centrada" (line-height=height).</p>
+  <p class="altura-doble">Texto con altura "doble" (line-height=2*height).</p>
+
+  <hr>
+  <h1 class="ejemplo">Alineación de texto (text-align)</h1>
+
+  <div style="width:30%;">
+    <p style="text-align: left;">Párrafo alineado a la izquierda
+    (text-align: left).
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Duis varius consectetur lobortis. Donec gravida orci sit amet imperdiet consequat. 
+    Duis eleifend tellus vitae sapien lacinia, quis posuere nisl pulvinar.
+    </p>
+    <p style="text-align: right;">Párrafo alineado a la derecha
+    (text-align: right).
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Duis varius consectetur lobortis. Donec gravida orci sit amet imperdiet consequat. 
+    Duis eleifend tellus vitae sapien lacinia, quis posuere nisl pulvinar.
+    </p>
+    <p style="text-align: center;">Párrafo alineado al centro
+    (text-align: center).
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Duis varius consectetur lobortis. Donec gravida orci sit amet imperdiet consequat. 
+    Duis eleifend tellus vitae sapien lacinia, quis posuere nisl pulvinar.
+    </p>
+    <p style="text-align: justify;">Párrafo con alineación justificada
+    (text-align: justify).
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Duis varius consectetur lobortis. Donec gravida orci sit amet imperdiet consequat. 
+    Duis eleifend tellus vitae sapien lacinia, quis posuere nisl pulvinar.
+    </p>
+  </div>
+
+  <hr>
+  <h1 class="ejemplo">Decoración de texto (text-decoration)</h1>
+  <p style="text-decoration: underline;">Párrafo subrayado (underline).</p>
+  <p style="text-decoration: overline;">Párrafo sobre-rayado (overline).</p>
+  <p style="text-decoration: line-through;">Párrafo "tachado" (line-through).</p>
+
+  <hr>
+  <h1 class="ejemplo">Indentación de texto (text-indent)</h1>
+  <div style="width:30%;margin-left:10%;">
+    <p class="indentado">Párrafo indentado.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Duis varius consectetur lobortis. Donec gravida orci sit amet imperdiet consequat. 
+    Duis eleifend tellus vitae sapien lacinia, quis posuere nisl pulvinar.
+    </p>
+    <p class="indentado">Otro párrafo indentado.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Duis varius consectetur lobortis. Donec gravida orci sit amet imperdiet consequat.
+    </p>
+    <p class="indentado-negativo">Párrafo con indentación negativa.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Duis varius consectetur lobortis. Donec gravida orci sit amet imperdiet consequat.
+    </p>
+  </div>
+
+  <hr>
+  <h1 class="ejemplo">Texto sombreado (text-shadow)</h1>
+
+  <h1>Texto normal.</h1>
+  <h1 class="texto-sombreado">Texto con sombra.</h1>
+  <div style="width: 30%; height: 200px;" class="contenedor-sombreado">
+    Texto dentro de un contenedor con sombra.
+  </div>
+
+  <hr>
+  <h1 class="ejemplo">Transformación de texto (text-transform)</h1>
+  <p>Texto normal.</p>
+  <p class="mayusculas">Texto transformado a mayúsculas.</p>
+  <p class="minusculas">Texto transformado a minúsculas.</p>
+  <p class="iniciales">Texto transformado a iniciales (capitalize).</p>
+
+  <hr>
+  <h1 class="ejemplo">Espaciado entre letras (letter-spacing)</h1>
+  <p>Texto normal.</p>
+  <p style="letter-spacing:-0.12em">Texto condensado.</p>
+  <p style="letter-spacing:0.5em">Texto más espaciado.</p>
+
+  <hr>
+  <h1 class="ejemplo">Espaciado entre palabras (word-spacing)</h1>
+  <p>Texto normal.</p>
+  <p style="word-spacing:0.5em">Texto con mayor espaciado entre palabras.</p>
+
+  <hr>
+  <h1 class="ejemplo">Fuentes "seguras" para la web</h1>
+  <h1 style="font-family:Arial,sans-serif;">Arial</h1>
+  <h1 style="font-family:'Courier New',monospace;">Courier New</h1>
+  <h1 style="font-family:Courier,monospace;">Courier</h1>
+  <h1 style="font-family:Garamond,serif;">Garamond</h1>
+  <h1 style="font-family:Georgia,serif;">Georgia</h1>
+  <h1 style="font-family:'Lucida Sans',sans-serif;">Lucida Sans</h1>
+  <h1 style="font-family:'Lucida Grande',sans-serif;">Lucida Grande</h1>
+  <h1 style="font-family:'Lucida Console',monospace;">Lucida Console</h1>
+  <h1 style="font-family:'Palatino Linotype',serif;">Palatino Linotype</h1>
+  <h1 style="font-family:Tahoma,sans-serif;">Tahoma</h1>
+  <h1 style="font-family:'Times New Roman',serif;">Times New Roman</h1>
+  <h1 style="font-family:Times,serif;">Times</h1>
+  <h1 style="font-family:'Trebuchet MS',sans-serif;">Trebuchet MS</h1>
+  <h1 style="font-family:Verdana,sans-serif;">Verdana</h1>
+
+  <hr>
+  <h1 class="ejemplo">Citas</h1>
+  
+  <h2><code>&lt;cite&gt;</code> Para hacer referencia a una creación, autor
+      o recurso (con frecuencia se incluye un enlace):
+  </h2>
+  <p>En el curso de 
+    <cite><a href="https://networkfaculty.com/es/courses/coursedetail/27-curso-programacion-en-perl">
+      Programación en Perl de Network Faculty</a>
+    </cite> podemos encontrar...
+  </p>
+  
+  <h2><code>&lt;q&gt;</code> Citas "en línea" de diálogo o prosa:</h2>
+  <p>El proyecto Debian lanzó la nueva versión de su sistema operativo,
+     de nombre clave "Jessie", y aseguró en su sitio oficial que
+     <q cite="https://www.debian.org/News/2015/20150426">se dará
+     soporte durante los próximos 5 años</q> a esta versión. Lea
+     el anuncio completo:
+     <a href="https://www.debian.org/News/2015/20150426">https://www.debian.org/News/2015/20150426</a>
+  </p>
+
+  <h2><code>&lt;blockquote&gt;</code> Citas externas más largas, típicamente
+  de varias líneas:</h2>
+  <p>...las primeras palabras de la novela:</p>
+  <blockquote>
+    <p>En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo
+    que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y
+    galgo corredor...</p>
+    <p><cite>Miguel de Cervantes Saavedra</cite>, en <q>El ingenioso hidalgo don Quijote de la Mancha</q></p>
+  </blockquote>
+
+</body>
+</html>

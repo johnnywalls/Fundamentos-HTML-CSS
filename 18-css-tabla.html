@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de estilos para tablas en CSS</title>
+  <meta charset="UTF-8">
+  <style>
+    /* Definimos una clase para usar con tablas, y aplicamos bordes a
+       los distintos elementos (tabla, encabezado, filas y columnas) */
+    .tabla-con-borde,
+    .tabla-con-borde th,
+    .tabla-con-borde tr,
+    .tabla-con-borde td {
+      border: 1px solid;
+      padding: 4px;
+      border-collapse: collapse;
+    }
+    /* estilo para el título de la tabla */
+    .tabla-con-borde caption {
+      font-weight: bold;
+    }
+
+    /* definir fondo para encabezado y pie de tabla */
+    .tabla-con-borde thead, .tabla-con-borde tfoot {
+      background: #395870;
+      background: linear-gradient(#49708f, #293f50);
+      color: white;
+    }
+    /* resaltar una fila al pasar con el ratón */
+    .tabla-con-borde tbody tr:hover {
+       /* El modificador "important" se usa para forzar la especificidad
+          sobre otras reglas */
+      background-color: lightblue!important;
+    }
+    /* cambiar el color de fondo para filas impares en cuerpo de tabla */
+    .tabla-con-borde tbody tr:nth-child(odd) {
+      background-color: #eee;
+    }
+    /* para alinear a la derecha las cifras en celdas de tabla */
+    .derecha {
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplo de estilos para tablas en CSS</h1>
+  <table class="tabla-con-borde">
+    <caption>Películas más taquilleras por año</caption>
+    <colgroup>
+      <col>
+      <col>
+      <col>
+      <col>
+      <col>
+      <col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th scope="col" colspan="2">Año</th>
+        <th scope="col">Título</th>
+        <th scope="col">Género</th>
+        <th scope="col">Presupuesto</th>
+        <th scope="col">Recaudación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="3">2013-2015</td>
+        <td>2015</td>
+        <td>Furious 7</td>
+        <td>Acción</td>
+        <td class="derecha">$190,000,000</td>
+        <td class="derecha">$324,424,352</td>
+      </tr>
+      <tr>
+        <td>2014</td>
+        <td>American Sniper</td>
+        <td>Drama</td>
+        <td class="derecha">$58,000,000</td>
+        <td class="derecha">$348,417,536</td>
+      </tr>
+      <tr>
+        <td>2013</td>
+        <td>The Hunger Games: Catching Fire</td>
+        <td>Aventura</td>
+        <td class="derecha">$130,000,000</td>
+        <td class="derecha">$424,668,047</td>
+      </tr>
+      <tr>
+        <td rowspan="3">2010-2012</td>
+        <td>2012</td>
+        <td>The Avengers</td>
+        <td>Aventura</td>
+        <td class="derecha">$225,000,000</td>
+        <td class="derecha">$623,279,552</td>
+      </tr>
+      <tr>
+        <td>2011</td>
+        <td>Harry Potter and the Deathly Hallows: Part II</td>
+        <td>Aventura</td>
+        <td class="derecha">$125,000,000</td>
+        <td class="derecha">$381,011,232</td>
+      </tr>
+      <tr>
+        <td>2010</td>
+        <td>Toy Story 3</td>
+        <td>Aventura</td>
+        <td class="derecha">$200,000,000</td>
+        <td class="derecha">$415,004,880</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4">Totales</td>
+        <td class="derecha">$928,000,000</td>
+        <td class="derecha">$2,516,805,599</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Estilos de listas con CSS</title>
+  <meta charset="UTF-8">
+  <style>
+    #lista1 {
+      /* Hay muchos valores para los estilos de viñetas, entre
+         los más comunes están disc, square, decimal,
+         upper|lower-alpha|roman o none */
+      list-style-type: square;
+    }
+    /* Podemos usar imágenes como viñetas para listas, pero
+       requiere utilizar una imagen como fondo y variar los
+       atributos del modelo de caja o la posición del fondo.
+       Hay que tener en cuenta el tamaño de la imagen para 
+       lograr un efecto adecuado */
+    #lista2 li {
+      background: url("icono-alerta.png") 0 50% no-repeat;
+      list-style-type: none;
+      /* Con una imagen de 16px, dejamos un relleno de unos 20px */
+      padding-left: 20px;
+      /* Pero si no queremos alterar la alineación del contenido
+         de la lista respecto de otros elementos, hay que compensar
+         el espacio añadido, quitándolo del margen */
+      margin-left: -20px;
+    }
+
+    /* La viñeta puede posicionarse dentro o fuera de cada item */
+    #lista3 { list-style-position: outside }
+    #lista4 { list-style-position: inside }
+
+    /* Podemos visualizar horizontalmente las listas, ya sea
+       utilizando el posicionamiento de inline-block o float */
+    #lista5 li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    /* tendremos que hacer clear después de la lista */
+    #lista6 li {
+      float: left;
+      margin: 0 20px;
+    }
+
+    /* Ejemplo de estilo de listas para navegación. Combinamos
+       varias de las técnicas utilizadas hasta ahora */
+    nav ul {
+      font: bold 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-transform: uppercase;
+    }
+    /* para la navegación, es más práctico el posicionamiento con inline-block */
+    nav li {
+      display: inline-block;
+    }
+    /* Usamos gradientes, bordes y el modelo de caja para dar estilo de botones
+       a los enlaces de navegación */
+    nav a {
+      background: #395870;
+      background: linear-gradient(#49708f, #293f50);
+      border-right: 1px solid rgba(0, 0, 0, .3);
+      color: #fff;
+      padding: 12px 20px;
+      text-decoration: none;
+    }
+    /* Agregamos un efecto de fondo y sombra al pasar el puntero
+       sobre los enlaces. Con la sombra "inset", hacemos que ésta
+       se muestre dentro del elemento, en lugar de fuera */
+    nav a:hover {
+      background: #314b60;
+      box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
+    }
+    /* Ponemos bordes redondeados al primer y último enlace, para lograr
+       un mejor efecto visual de "botones" */
+    nav li:first-child a {
+      border-radius: 8px 0 0 8px;
+    }
+    nav li:last-child a {
+      border-right: 0;
+      border-radius: 0 8px 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Estilos de listas con CSS</h1>
+  <hr>
+
+  <h2>Estilos de viñetas</h2>
+  <ul id="lista1">
+    <li>Simpson
+      <ul>
+        <li>Bart</li>
+        <li>Lisa</li>
+        <li>Homero</li>
+        <li>Marge</li>
+      </ul>
+    </li>
+    <li>Flanders</li>
+    <li>Gorgory</li>
+    <li>Burns</li>
+    <li>Van Houten</li>
+  </ul>
+
+  <hr>
+  <h2>Imágenes como viñetas</h2>
+  <ul id="lista2">
+    <li>Simpson</li>
+    <li>Flanders</li>
+    <li>Gorgory</li>
+    <li>Burns</li>
+    <li>Van Houten</li>
+  </ul>
+
+  <hr>
+  <h2>Posición de viñetas (inside|outside)</h2>
+  <div style="width:30%;">
+    <ul id="lista3">
+      <li>Lorem: ipsum dolor sit amet, consectetur adipiscing
+          elit. Duis varius consectetur lobortis. Donec gravida 
+          orci sit amet imperdiet consequat. Duis eleifend tellus 
+          vitae sapien lacinia, quis posuere nisl pulvinar
+      </li>
+      <li>Quisque: tristique quam at ornare aliquet. Cum sociis
+          natoque penatibus et magnis dis parturient montes, 
+          nascetur ridiculus mus.  Pellentesque habitant morbi 
+          tristique senectus et netus et malesuada fames ac turpis egestas. 
+      </li>
+    </ul>
+
+    <ul id="lista4">
+      <li>Lorem: ipsum dolor sit amet, consectetur adipiscing
+          elit. Duis varius consectetur lobortis. Donec gravida 
+          orci sit amet imperdiet consequat. Duis eleifend tellus 
+          vitae sapien lacinia, quis posuere nisl pulvinar
+      </li>
+      <li>Quisque: tristique quam at ornare aliquet. Cum sociis
+          natoque penatibus et magnis dis parturient montes, 
+          nascetur ridiculus mus.  Pellentesque habitant morbi 
+          tristique senectus et netus et malesuada fames ac turpis egestas. 
+      </li>
+    </ul>
+  </div>
+
+  <hr>
+  <h2>Lista horizontal</h2>
+  <ul id="lista5">
+    <li>Simpson</li>
+    <li>Flanders</li>
+    <li>Gorgory</li>
+    <li>Burns</li>
+    <li>Van Houten</li>
+  </ul>
+  (con float)
+  <ul id="lista6">
+    <li>Simpson</li>
+    <li>Flanders</li>
+    <li>Gorgory</li>
+    <li>Burns</li>
+    <li>Van Houten</li>
+  </ul>
+
+  <!-- quitamos el efecto float de la lista anterior -->
+  <hr style="clear: both;">
+
+  <h2>Lista de navegación</h2>
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Noticias</a></li>
+      <li><a href="#">Productos</a></li>
+      <li><a href="#">Contacto</a></li>
+      <li><a href="#">Acerca de Nosotros</a></li>
+      <li><a href="#">Mapa del Sitio</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fondos y gradientes con CSS</title>
+  <meta charset="UTF-8">
+  <style>
+    /* margen, altura y colores para mejor visualización de ejemplos */
+    div {
+      margin-bottom: 20px;
+      height: 100px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 100px;
+      border: 2px solid black;
+    }
+    div span { background-color: white; }
+
+    #fondo1 {
+      /* Aquí utilizamos un color como "fallback" en caso de que el
+         navegador no soporte la especificación de transparencia
+         con rgba en la segunda línea. */
+      background-color: #b2b2b2;
+      background-color: rgba(0, 0, 0, .3);
+      background-image: url("alert.png");
+      background-repeat: no-repeat;
+      background-position: left top;
+    }
+    /* Utilizaremos varios valores de background-repeat para ilustrar
+       nuestros ejemplos */
+    #fondo2 {
+      background-image: url("alert.png");
+      background-repeat: repeat;
+      background-position: left top;
+    }
+    #fondo3 {
+      background-image: url("alert.png");
+      background-repeat: repeat-x;
+      background-position: left top;
+    }
+    #fondo4 {
+      background-image: url("alert.png");
+      background-repeat: repeat-y;
+      background-position: left top;
+    }
+    /* Combinamos varias imágenes de fondo, y utilizamos la sintaxis "corta" */
+    #fondo5 {
+      background: url("circle.png") left top no-repeat,
+                  url("alert.png") 10px 10px no-repeat;
+    }
+    /* En los gradientes lineales, se usa la función linear-gradient con un color
+       de inicio y un color final. Especificamos un color de fondo como
+       "fallback" en caso de que el navegador no soporte los gradientes con CSS.
+       Igualmente, para mayor compatibilidad, agregamos funciones con prefijos
+       para distintos navegadores que implementaron sus propias funciones, aunque
+       en las versiones más modernas ya no es estrictamente necesario. */
+    #fondo6 {
+      background: lavender;
+      background: -webkit-linear-gradient(lavender, darkslategray);
+      background:    -moz-linear-gradient(lavender, darkslategray);
+      background:         linear-gradient(lavender, darkslategray);
+    }
+    /* Cambiamos la dirección del gradiente */
+    #fondo7 {
+      background: linear-gradient( to right bottom, lavender, darkslategray);
+    }
+    /* Gradiente radial (desde adentro hacia afuera) */
+    #fondo8 {
+      background: radial-gradient( lavender, darkslategray);
+    }
+    /* Puntos de parada del gradiente */
+    #fondo9 {
+      background: linear-gradient( to right, lavender, gold 50%, gray 70%, darkslategray);
+    }
+
+    #fondo10 {
+      background: url("alert.png") left top no-repeat;
+      /* podemos especificar el tamaño del fondo en dimensiones horizontal y vertical */
+      background-size: 80% auto;
+      height: 300px;
+      width: 300px;
+    }
+    #fondo11 {
+      background: url("alert.png") left top no-repeat;
+      /* También podemos especificar las palabras clave 'cover' y 'contain' */
+      background-size: cover;
+      height: 300px;
+      width: 300px;
+    }
+    #fondo12 {
+      background: url("alert.png") left top no-repeat;
+      /* podemos especificar el tamaño del fondo en dimensiones horizontal y vertical */
+      background-size: contain;
+      height: 300px;
+      width: 300px;
+    }
+    #fondo13 {
+      background: url("alert.png") left top no-repeat;
+      /* Podemos especificar el recorte del fondo con los mismos valores de box-sizing:
+         border-box, padding-box y content-box. Esto define el área que será cubierta
+         por el fondo */
+      background-clip: content-box;
+      background-size: 100% auto;
+      height: 300px;
+      width: 300px;
+      border: 20px dotted black;
+      padding: 20px;
+    }
+    #fondo14 {
+      background: url("alert.png") left top no-repeat;
+      background-clip: border-box;
+      background-size: 100% auto;
+      height: 300px;
+      width: 300px;
+      border: 20px dotted black;
+      padding: 20px;
+    }
+    #fondo15 {
+      background: url("alert.png") left top no-repeat;
+      background-origin: border-box;
+      background-size: 100% auto;
+      height: 300px;
+      width: 300px;
+      border: 20px dotted black;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fondos y gradientes con CSS</h1>
+  <div id="fondo1"><span>Fondo 1: no-repeat</span></div>
+  <div id="fondo2"><span>Fondo 2: repeat</span></div>
+  <div id="fondo3"><span>Fondo 3: repeat-x</span></div>
+  <div id="fondo4"><span>Fondo 4: repeat-y</span></div>
+  <div id="fondo5"><span>Fondo 5: varias imágenes de fondo combinadas</span></div>
+  <div id="fondo6"><span>Fondo 6: Gradiente lineal (de arriba a abajo)</span></div>
+  <div id="fondo7"><span>Fondo 7: Gradiente lineal (diagonal)</span></div>
+  <div id="fondo8"><span>Fondo 8: Gradiente radial</span></div>
+  <div id="fondo9"><span>Fondo 9: Gradiente con puntos de parada</span></div>
+  <div id="fondo10"><span>Fondo 10: Forzar tamaño de fondo (80% horizontal)</span></div>
+  <div id="fondo11"><span>Fondo 11: Tamaño de fondo: cover</span></div>
+  <div id="fondo12"><span>Fondo 12: Tamaño de fondo: contains</span></div>
+  <div id="fondo13"><span>Fondo 13: Recorte de fondo: content-box</span></div>
+  <div id="fondo14"><span>Fondo 14: Recorte de fondo: border-box</span></div>
+  <div id="fondo15"><span>Fondo 15: Origen de fondo: border-box</span></div>
+</body>
+</html>
